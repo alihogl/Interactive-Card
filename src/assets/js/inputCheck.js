@@ -6,10 +6,10 @@ export const inputCheck = {
         'errMsg' : 'Wrong format, numbers only'
     },
     mm: {
-        'errMsg' : 'Enter a month date',
+        'errMsg' : 'Enter a month date'
     },
     yy: {
-        'errMsg' : 'Enter a year date',
+        'errMsg' : 'Enter a year date'
     },
     cvc: {
      'errMsg' : 'Incorrect cvc'
