@@ -1,0 +1,308 @@
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("../font/SpaceGrotesk-Medium.ttf");
+    font-weight: 500;
+}
+
+* {
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+
+}
+
+body::after {
+    content: '';
+    background-image: url('../images/bg-main-desktop.png');
+    height: 100%;
+    width: 32%;
+    z-index: -10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    .card-review {
+        width: 45%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        
+        .card-front {
+            background-image: url('../images/bg-card-front.png');
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+            margin-left: auto;
+            margin-right: 60px;
+            position: relative;
+            &::after {
+                content: url('../images/card-logo.svg');
+                position: absolute;
+                top: 20px;
+                left: 20px;
+            }
+            span {
+                font-size: 28px;
+                
+            }
+            .name-exp-review div, span {
+                color: hsl(270, 3%, 87%);
+                letter-spacing: 3px;
+          
+            }
+            .name-exp-review {
+                margin-top: 20px;
+                display: flex;
+                .exp_review {
+                    display: flex;
+                }
+             
+               & div {
+                font-size: 14px;
+               }
+               & div:nth-child(2) {
+                margin-left: auto;
+               }
+            }
+        
+    
+        }
+        .card-back {
+            background-image: url('../images/bg-card-back.png');
+            margin-left: auto;
+            position: relative;
+            span {
+                position: absolute;
+                top:7rem;
+                right: 55px;
+                color: hsl(270, 3%, 87%);
+                font-size: 19px;
+            }
+        }
+        
+        .card-front, .card-back {
+            height: 250px;
+            min-height: 200px;
+            max-width: 28rem;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 30px;
+        }
+
+    }
+    .card-input {
+        flex: 1;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        .form-area {
+            .success-area {
+                display: flex;
+                flex-direction: column;
+                max-width: 600px;
+                row-gap: 10px;
+                .msg-area {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 5px;
+                }
+                .success-logo img  {
+                    height: 70px;
+                }
+                .thanks-msg {
+                    font-size: 24px;
+                    letter-spacing: 5px;
+                }
+                .success-info {
+                 font-size: 20px;
+                 color: hsl(279, 6%, 55%);
+                }
+                .btn button {
+                    width: 100%;
+                    height: 40px;
+                    margin-top: 15px;
+                    background-color: hsl(278, 68%, 11%);
+                    color: hsl(270, 3%, 87%);
+                    border: 0;
+                    font-size: 18px;
+                    border-radius: 6px;
+                    transition: 600ms margin-top;
+                    cursor: pointer;
+                }
+            }
+            
+            form {
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+                .txt-body {
+                    color: hsl(278, 68%, 11%);
+                    font-size: 16px;
+                }
+              
+                .card-info {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+               
+                    .exp-date {
+                        .mm-yy input{
+                            width: 80px;
+                        }
+                    }
+                    .cvc {
+                        input {
+                            width: 150px
+                        }
+                    }
+                  
+                }
+                .sbt {
+                    button {
+                        width: 100%;
+                        height: 45px;
+                        margin-top: 15px;
+                        background-color: hsl(278, 68%, 11%);
+                        color: hsl(270, 3%, 87%);
+                        font-size: 18px;
+                        border-radius: 6px;
+                        transition: 600ms margin-top;
+                        cursor: pointer;
+                    }
+                }
+  
+                .card-name input, .card-number input {
+                    width: 350px;
+                }
+            }
+        }
+
+        input {
+            height: 40px;
+            border-radius: 6px;
+            outline: none;
+            border: 1px solid hsl(270, 3%, 87%);
+            font-size:18px;
+            color: hsl(278, 68%, 11%);
+            padding: 10px;
+            margin-top: 10px;
+            text-transform: uppercase;
+            &:focus {
+                background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, hsl(249, 99%, 64%) ,  hsl(278, 94%, 30%)) border-box;
+  border-radius: 50em;
+  border: 1px solid transparent;
+                border-radius: 5px;
+            }
+            &::placeholder {
+                color: hsl(270, 3%, 87%);
+                padding: 4px;
+                font-size: 16px;
+                opacity: 1; /* Firefox */
+              }
+              
+              ::-ms-input-placeholder { /* Edge 12 -18 */
+                color: hsl(270, 3%, 87%);
+              }
+
+        }
+      
+    }
+}
+
+.exp-wrong-area {
+    position: absolute;
+}
+.wrong_crd_number_review,.wrong_mm, .wrong_yy, .wrong_cvc, .wrong_name_review{
+    color: hsl(0, 100%, 66%);
+    font-size: 12px;
+ 
+}
+.wrong_cvc {
+    position: absolute;
+}
+
+
+@media (max-width:900px), (max-height:500px) {
+    body::after {
+        content: '';
+        background-image: url('../images/bg-main-mobile.png');
+        height: 230px;
+        width: 100%;
+        z-index: -10;
+        position: absolute;
+        top: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container {
+        flex-direction: column;
+        height: 100vh;
+        .card-review{
+            align-items: center;
+            width: auto;
+            height: auto;
+            padding-top:20px;
+            .card-front {
+      
+                order: 2;
+                z-index: 2;
+                margin-top: 6rem!important ;
+                &::after {
+                    top: 5px;
+                    left: 5px;
+                }
+                span {
+                    font-size: 20px;
+                }
+              
+             
+            }
+            .card-back {
+                order: 1;
+                margin-left: 80px!important;
+                position: absolute;
+                span {
+                    position: absolute;
+                    top:4.7rem;
+                    right: 55px;
+                    color: hsl(270, 3%, 87%);
+                    font-size: 19px;
+                }
+                
+            }
+            .card-front, .card-back {
+                height: 180px;
+                max-width: 500px;
+                transform: scale(0.9);
+                width: 350px;
+                min-height: auto;
+                margin: 0;
+            }
+        }
+
+        .card-input {
+            margin-top: 0px;
+            flex: 0;
+           
+        }
+    }
+    
+
+}

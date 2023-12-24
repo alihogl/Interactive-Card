@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive card</title>
+    <link rel="stylesheet" href="src/assets/css/main.css">
+    <body>
+
+        <div class="container">
+            <div class="card-review">
+                <div class="card-front">
+                    <span class="crd_number_review">0000 0000 0000 0000</span>
+               
+                       <div class="name-exp-review">
+                        <div class="name_review">ALI HUSEYINOGLU</div>
+                        <div class="exp_review">
+                            <div class="mm">09</div>
+                            /
+                            <div class="yy">00</div>
+                        </div>
+                       </div>
+                </div>
+                <div class="card-back">
+                    <span class="cvc">000</span>
+                </div>
+            </div>
+            <div class="card-input">
+                <div class="form-area">
+                    
+                    <form action="" method="POST">
+                        <div class="card-name">
+                            <div class="txt-body">CARDHOLDER NAME</div>
+                            <input class="review" id="name_review"  maxlength="20"  placeholder="e.g. ALI HUSEYINOGLU" type="text">
+                        </div>
+                        <div class="card-number">
+                            <div class="txt-body"> </div>
+                            <input class="review" id="crd_number_review" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+                        </div>
+                        <div class="card-info">
+                            <div class="exp-date">
+                                <div class="txt-body">EXP. DATE (MM/YY)</div>
+                                <div class="mm-yy">
+                                    <input class="review" placeholder="MM" id="mm" type="text">
+                                    <input class="review" placeholder="YY" id="yy" type="text">
+                                </div>
+                                <div class="exp-wrong-area">
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="cvc">
+                                <div class="txt-body">CVC</div>
+                                <input class="review" placeholder="e.g. 123 " id="cvc" type="text">
+                            </div>
+                        </div>  
+                        <div class="sbt">
+                            <button type="button">Confirm</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+ 
+    </body>
+
+
+    <script type="module" src="src/assets/js/app.js"></script>
+
+</html>
